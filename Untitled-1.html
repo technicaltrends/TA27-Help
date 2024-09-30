@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Help Section</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .w3-sidebar a {font-family: "Roboto", sans-serif}
+    body, h1, h2, h3, h4, h5, h6, .w3-wide {font-family: "Montserrat", sans-serif;}
+    body {
+      background-size: cover;
+      background-image: url('logo.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar/menu -->
+  <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+    <div class="w3-container w3-display-container w3-padding-16">
+      <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+      <h3 class="w3-wide"><b>Technical Trends</b></h3>
+    </div>
+    <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+      <a href="#" class="w3-bar-item w3-button">Getting Started</a>
+      <a href="#" class="w3-bar-item w3-button">User Guide </a>
+      <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Parameters <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#pvalue" class="w3-bar-item w3-button w3-light-grey"> P value</a>
+        <a href="#SQN" class="w3-bar-item w3-button">SQN</a>
+        <a href="#bootstrap" class="w3-bar-item w3-button">Bootstrap</a>
+        <a href="#calmarratio" class="w3-bar-item w3-button">Calmar ratio</a>
+        <a href="#recoveryfactor" class="w3-bar-item w3-button">Recovery Factor</a>
+      </div>
+      <a href="#" class="w3-bar-item w3-button">FAQs</a>
+      <a href="#" class="w3-bar-item w3-button">Tips & Tricks</a>
+      <a href="#" class="w3-bar-item w3-button">Glossary</a>
+      <a href="#" class="w3-bar-item w3-button">About</a>
+    </div>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding">Contact</a> 
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+    <a href="#subscribe"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+  </nav>
+
+  <!-- Top menu on small screens -->
+  <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+    <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </header>
+
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-left:250px">
+
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="margin-top:83px"></div>
+    
+ <!-- Top header -->
+    <header class="w3-container w3-xlarge">
+      <p class="w3-left"> Strategy App help </p>
+      </p>
+    </header>
+    <!-- Main Content -->
+    <p> <h1 id="pvalue">P-Value</h1>
+      The P-Value is used to assess the statistical significance of the strategy’s performance.<br>
+      
+      <br>A lower P-Value (typically below 0.05) indicates that the strategy's results are statistically significant, suggesting that the observed returns are unlikely to have occurred by chance.
+      
+      p-Value of the Strategy’s Performance:
+      <h2>Why it matters:</h2>
+       The p-value measures the probability that the observed performance occurred by random chance. A p-value below a certain threshold (commonly 0.05) indicates that your strategy’s performance is statistically significant, meaning it’s unlikely to be due to random noise.
+      
+      <h2>How it helps robustness:</h2> If the p-value is low, you can be more confident that your strategy is generating real alpha (excess returns). It’s a direct way of checking whether the performance is significantly better than random trading.
+      
+      <h2>Measure:</h2>
+      Conduct a hypothesis test on key performance metrics (e.g., Sharpe ratio or net profit) to calculate the p-value.
+      <br><br>The null hypothesis could be that the strategy generates zero excess return, and the test would determine whether the observed returns significantly exceed this.
+      
+      <h2>Interpretation of p-value:</h2>
+      Low p-value (< 0.05): Reject the null hypothesis — your strategy's mean return is significantly different from zero, indicating that it likely has a real edge.
+      <br><br> High p-value (>= 0.05): Fail to reject the null hypothesis — there's insufficient evidence to conclude that your strategy’s mean return is different from zero, which may suggest the performance could be due to random chance.
+      
+      <h2>Conclusion:</h2>
+      Statistical Significance: A low p-value strongly suggests that the performance of your strategy is statistically significant. In other words, your strategy's returns are unlikely to be a result of random fluctuations, and there is a high probability that your strategy is generating real alpha (i.e., excess returns over zero).
+      Confidence: You can be very confident (with a significance level of ~0.1%) that your strategy has a real edge and is not just capitalizing on randomness.
+      <h2>Practical Implications:</h2>
+      This is a positive result for the robustness of your strategy.
+      You may want to further analyze other aspects of the strategy (e.g., stability over time, drawdown, etc.) to reinforce this conclusion.
+      
+      <h1 id="SQN">SQN</h1>
+      The System Quality Number (SQN) is a measure of the system's performance.
+      
+      <li>>A higher SQN indicates a better risk-adjusted return. Generally:</li>
+      <li>SQN < 1: Poor system</li>
+      <li> SQN between 1 and 2: Average system</li>
+      <li> SQN between 2 and 3: Good system</li>
+      <li> SQN > 3: Excellent system.</li>
+      
+      <h1>Rolling P-Value</h1>
+      Rolling P-Value is calculated over a moving window. It helps you track the statistical significance of your strategy's performance over time.
+      
+      <h1>Rolling SQN</h1>
+      Rolling SQN measures the system quality over a rolling period, giving insights into how the risk-adjusted return of the strategy changes across different periods.
+      
+      <h1 id="bootstrap">BOOTSTRAP</h1>
+      <h2> Bootstrap Resampling:</h2>
+      <b> What it does:</b> Bootstrap resampling involves taking multiple random samples (with replacement) from your existing trade data to simulate different possible outcomes. This helps assess how stable your strategy's performance is across multiple simulated scenarios.
+      <br><br> <b> Why it's robust:</b> Instead of relying on a single performance result, you get a distribution of outcomes, allowing you to calculate confidence intervals for your key metrics (net profit, Sharpe ratio, etc.).
+      
+      <h1 id="calmarratio">CALMAR-RATIO</h1>
+      A Calmar Ratio of 2.7 indicates that your trading strategy is generating 2.7 times more annualized return than the maximum drawdown experienced. Here's how to interpret this:
+      
+      <h2>Interpretation of Calmar Ratio:</h2>
+      
+      Calmar Ratio > 1: A ratio greater than 1 indicates that the strategy’s annualized returns exceed its worst drawdown, which generally means the system is performing well and efficiently managing risk.
+      <br><br>Calmar Ratio of 2.7: A value of 2.7 means that for every unit of risk (drawdown), the strategy produces 2.7 units of return. This is considered very good in terms of risk-adjusted performance. It indicates that your system is generating substantial returns relative to the worst loss it experienced.
+      
+      <h2>General Guidelines:</h2>
+      
+      Calmar Ratio < 1: The system is risky, as the drawdowns are larger than the returns.
+      <br> <br> Calmar Ratio > 1: Indicates good performance. The higher the ratio, the better the system balances return with risk.
+      <br> <br> Calmar Ratio > 3: Considered excellent in most trading systems, especially over a long period.
+      
+      <br> <br> With a Calmar Ratio of 2.7, your system shows a good balance of return relative to its risk, indicating a robust strategy with efficient risk management.
+      
+      <h1 id="recoveryfactor">RECOVERY-FACTOR</h1>
+      A Recovery Factor of 6.07 means that your trading strategy's net profit is approximately 6 times larger than its maximum drawdown.
+      
+      <h2>Interpretation of Recovery Factor:</h2>
+      
+      Recovery Factor > 1: This means the system has recovered more profit than it lost during its worst drawdown. A value above 1 is generally good.
+      <br><br> Recovery Factor of 6.07: This suggests that the system has recovered 6 times its largest loss, meaning it performs very well in recovering from drawdowns and continues generating profit.
+      
+      <h2>General Guidelines:</h2>
+      
+      Recovery Factor < 1: The system struggles to recover from drawdowns and may indicate a risky or less profitable system.
+      <br><br> Recovery Factor > 1: Indicates that the system is profitable and able to recover from losses. The higher the value, the better the system is at recovering from losses.
+      <br><br> Recovery Factor > 5: Considered excellent. Your system is highly profitable and demonstrates strong resilience in recovering from drawdowns.
+      
+      With a Recovery Factor of 6.07, your system is considered very robust, as it has recovered significantly more profit than its worst drawdown.<br></p>
+      
+      
+
+    <!-- Subscribe section -->
+    <div class="w3-container w3-black w3-padding-32">
+      <h1 id="subscribe">Subscribe</h1>
+      <p>To get special offers and VIP treatment:</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+      <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+      <div class="w3-row-padding">
+        <div class="w3-col s4">
+          <h4 id="contact" >Contact</h4>
+          <p>Questions? Go ahead.</p>
+          <form action="/action_page.php" target="_blank">
+            <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+            <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+            <button type="submit" class="w3-button w3-block w3-black">Send</button>
+          </form>
+        </div>
+
+        <div class="w3-col s4">
+          <h4>About</h4>
+          <p><a href="#">About us</a></p>
+ 
+        </div>
+
+        <div class="w3-col s4 w3-justify">
+          <h4>Address</h4>
+          <p><i class="fa fa-fw fa-map-marker"></i>E 364 Greater Kailash 2 New Delhi - 110048</p>
+          <p><i class="fa fa-fw fa-phone"></i> +91 0000000000</p>
+          <p><i class="fa fa-fw fa -envelope"></i> example@mail.com</p>
+          <br>
+        </div>
+      </div>
+    </footer>
+
+    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"> Technical Trends </a></div>
+
+    <!-- End page content -->
+  </div>
+
+  <!-- Newsletter Modal -->
+  <div id="newsletter" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+      <div class="w3-container w3-white w3-center">
+        <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+        <h2 class="w3-wide">NEWSLETTER</h2>
+        <p>Join our mailing list to receive updates & special offers.</p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+        <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  // Accordion 
+  function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+
+  // Open and close sidebar
+  function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+  }
+ 
+  function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+  }
+  </script>
+
+</body>
+</html>
