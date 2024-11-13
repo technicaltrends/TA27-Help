@@ -10,27 +10,19 @@
   <style>
     .w3-sidebar a {font-family: "Roboto", sans-serif}
     body, h1, h2, h3, h4, h5, h6, .w3-wide {font-family: "Montserrat", sans-serif;}
-    body {
-      background-size: cover;
-      background-image: url('logo.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      height: 100vh;
-      margin: 0;
-    }
   </style>
 </head>
-<body>
+<body class="w3-content" style="max-width:1200px">
 
   <!-- Sidebar/menu -->
   <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
     <div class="w3-container w3-display-container w3-padding-16">
       <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
-      <h3 class="w3-wide"><b>Technical Trends</b></h3>
+      <h3 class="w3-wide"><b>S2 Analytics</b></h3>
     </div>
     <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
-      <a href="#" class="w3-bar-item w3-button">Getting Started</a>
-      <a href="#" class="w3-bar-item w3-button">User Guide </a>
+      <a href="#gettingstarted" class="w3-bar-item w3-button">Getting Started</a>
+      <a href="#datamanagement" class="w3-bar-item w3-button">Data management </a>
       <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
         Parameters <i class="fa fa-caret-down"></i>
       </a>
@@ -66,18 +58,160 @@
     <!-- Push down content on small screens -->
     <div class="w3-hide-large" style="margin-top:83px"></div>
     
- <!-- Top header -->
+    <!-- Top header -->
     <header class="w3-container w3-xlarge">
       <p class="w3-left"> Strategy App help </p>
+      <p class="w3-right">
+        <i class="fa fa-search"></i>
       </p>
     </header>
     <!-- Main Content -->
-    <p> <h1 id="pvalue">P-Value</h1>
+    
+    <h1 id="gettingstarted">Getting Started</h1>
+      <b>Installation and Setup <br></b>
+        <br><b>1.1 Downloading the Application <br></b>
+         <br>  To begin, download the latest version of the application from [provide the download source, e.g., company website or repository link]. Choose the version that matches your operating system (Windows, macOS, or Linux). <br>
+
+      <br><b>1.2 Installing the Application </b> <br>
+         <br> After downloading, follow these steps to install: <br>
+
+      <br>Windows: Run the .exe file and follow the on-screen instructions to install the application. <br>
+      <br>macOS: Open the .dmg file, drag the application icon into the Applications folder, and launch it from there. <br>  
+      <br>Linux: Extract the downloaded files and run the installer from the terminal using the following command: ./install.sh. <br>
+      <br><b>1.3 First-Time Setup and Configuration</b> <br> 
+          <br> Upon launching the application, you’ll be guided through a one-time setup: <br>
+
+      <br><b>Data Directory Selection:</b> <br> 
+      
+      <br> Choose a folder where your historical data files will be stored. You can always modify this later in the settings. <br>
+      <br> Default Settings: Configure initial settings, such as your preferred trading symbols, date range, and display options for charts. [Include a placeholder image here showing the configuration screen with settings like data directory and default trading symbols. <br>
+       
+      <br><b>Basic Interface Overview</b> <br>
+      
+      <br>The main interface is designed for ease of navigation, providing quick access to core functions like strategy selection, data import, and test execution. <br>
+
+       <br><b>1.4 Main Dashboard</b><br>
+       <br>The dashboard is the central hub for all actions within the app, organized into several key areas: <br>
+
+     <br><li>Top Menu Bar: Located at the top of the application window, this bar provides access to file management options, settings, help resources, and any additional tools. [Include a placeholder image showing the top menu bar, highlighting the settings and help <br> </li>
+     <br><li>Sidebar: The sidebar on the left side of the screen lists available strategies, data sources, and quick access to recent analyses. Here, you can select a strategy or data set with a single click. [Placeholder image of the sidebar, showing strategy options and recent analyses.</li> <br>
+     <br><li>Workspace Area: The main workspace area in the center of the interface displays selected data, charts, and performance metrics. This area updates dynamically as you navigate between different strategies, test results, and analysis views. [Placeholder image displaying the workspace with example charts and results for a selected strategy.</li><br>
+     <br><li>Bottom Toolbar: At the bottom of the interface, the toolbar contains shortcuts for running tests, stopping processes, and viewing logs. These options help you control and monitor the status of active tests or optimizations.</li><br>
+    
+    <br><b> 1.5 Key Menu Options and Icons </b><br>
+
+    <br>File Menu: Import and export data, save or load configurations, and access data management settings. <br>
+    <br>Strategy Menu: Choose from the ready-made strategies or open the editor to start creating your own custom strategy.<br>
+    <br>Tools Menu: Access data analysis tools, including chart customization, indicator selection, and optimization features.<br>
+  
+    <br> <b> Tips for First-Time Users </b> <br>
+
+    <br>Explore Provided Strategies: To get a quick start, explore some of the pre-configured strategies in the sidebar. Run a test on one of them to familiarize yourself with the testing and analysis workflow.<br>
+    <br> Adjust Display Settings: If you prefer a dark or light theme, this option is available in settings under "Display." You can also modify the chart’s default colors, line thickness, and gridlines to suit your preference.<br>
+    <br>This overview gives users a clear understanding of each section of the interface and how to navigate it. Let me know if there’s any specific interface functionality you’d like more detailed guidance on!<br>
+
+      
+    
+     <h1 id="datamanagement">Data Management</h1>
+        <br>Loading and Managing Data <br>
+      <b><br>3.1 Importing Historical Data</b> <br>
+       <br>To effectively backtest strategies, the application supports importing historical data in various formats. Supported file types include .csv, .xlsx, and .json. <br>
+
+      <br>CSV Format: If you’re using a .csv file, it should contain columns for Date/Time, Open, High, Low, Close, and Volume, with date formats in YYYY-MM-DD format and time in HH:MM:SS. <br>
+      <br>Excel Format: .xlsx files should have similar columns to CSV files, with the Date/Time column correctly formatted. [Placeholder image showing a sample CSV or Excel file layout with proper columns and data. <br>
+          
+      <br> <b>To load your data:</b> <br>
+
+      <br>Go to File > Import Data and select your file.<br>
+      <br>Confirm that the column mappings are correct in the preview window.<br>
+      <br>Select Save to finalize the import, and the data will appear in your workspace under the selected symbol.<br>
+      <br><b>3.2 Organizing Your Data</b><br>
+      <br>Data organization is essential for efficient testing. Consider creating subfolders for each trading symbol or market to keep data organized by asset type, date range, or frequency. <br>
+
+      <br>Symbol-Based Folders: Group files by ticker symbol, making it easier to locate specific data. <br>
+      <br>Time-Based Segmentation: Use separate files for different timeframes (e.g., monthly, yearly), particularly when working with large datasets.<br>
+      <br>  Date Range and Data Compression <br>
+      <br> <b> 3.3 Selecting Date Ranges for Testing</b> <br>
+      <br>  In the testing configuration screen, you’ll find options to select the desired date range for each test. This allows you to specify start and end dates, enabling focused analysis on specific market periods or events. <br>
+      <br>  Setting Start and End Dates: Use the date picker to define a specific period. Backtesting different date ranges helps analyze how a strategy performs under varying market conditions. <br>
+      <br> <b> 3.4 Data Compression </b> <br>
+      <br>Data compression reduces the amount of data processed by aggregating smaller time intervals into larger ones. This can be beneficial for users working with high-frequency data or limited computing resources. <br>
+
+      <br>Compression Options: You can compress data to hourly, daily, or weekly intervals. Compressing intraday data (e.g., 1-minute bars) to daily bars can make tests run faster and allow for broader analysis. <br>
+      <br>Configuring Compression: In Settings, choose a compression option suitable for the test (e.g., daily bars for long-term strategies, 15-minute bars for intraday strategies). <br>
+       [Placeholder image showing an example of the Date Range and Data Compression settings in the configuration menu. <br>
+    
+    
+       <h1>Testing and Optimization</h1>
+       <br>Running Tests <br>
+     <b><br>4.1 Executing a Backtest</b> <br>
+      <br>To run a backtest, select a strategy from the sidebar, then specify your symbol and date range. Use the following steps:<br>
+
+     <br>Choose a Strategy: Select from the available strategies or load a custom script. <br>
+     <br>Configure Parameters: Adjust parameters like stop-loss, take-profit levels, and any custom settings relevant to your strategy. <br>
+     <br>Run Test: Click Run to start the backtest. A progress bar will appear, showing the test’s status. <br> 
+     
+     <br> <b>4.2 Interpreting Results</b> <br>
+
+     <br>Once the test completes, results populate the workspace with essential performance metrics and charts:<br>
+     <br>Equity Curve: Visualizes the growth of the account balance over time, allowing for quick insights into the strategy’s overall profitability.<br>
+     <br>Performance Summary: Key metrics like net profit, drawdown, and total trades are displayed here for an overview of the strategy’s effectiveness. [Placeholder image displaying an equity curve and performance summary.]<br>
+     <br><b>4.3 Navigating the Output</b><br>
+     <br>Each test’s results can be navigated using tabs in the workspace: <br>
+
+     <br>Trade List: Shows individual trades, including entry and exit points, profit or loss, and duration. <br>
+     <br>Performance Metrics: View detailed metrics such as Sharpe ratio, profit factor, and Sortino ratio.<br>
+     <br>Charts: See additional charts like drawdowns or PnL (Profit and Loss) distributions. <br>
+     <br> <b> Walk-Forward Analysis</b> <br>
+     <br>  Walk-forward analysis is a technique for assessing strategy robustness by dividing data into training and testing segments, cycling through multiple timeframes.<br>
+     <br> <b> 4.4 Setting Up Walk-Forward Testing</b> <br>
+     <br>  In the Testing Configuration menu, enable Walk-Forward Analysis. <br>
+     <br>  Define your training and testing periods by number of bars or date range (e.g., 300 bars for training, 100 bars for testing). <br>
+     <br>  Set the sliding window: A setting that shifts the analysis window forward for each iteration, simulating a forward-looking approach. <br>
+     <br>  [Placeholder image showing a configuration window with walk-forward settings, training, and testing period selections.]<br>
+     <br> <b>4.5 Analyzing Walk-Forward Results</b> <br>
+     <br>Walk-forward analysis generates a sequence of metrics across training and testing periods. The key outcome is a report highlighting periods where the strategy performed well in both in-sample (training) and out-of-sample (testing) data. <br>
+     <br>Evaluating Consistency: Look for periods where the strategy shows steady performance, suggesting a robust approach. Large discrepancies between training and testing results may indicate overfitting.<br>
+     <br><b>Parameter Optimization</b> <br>
+     <br>Parameter optimization helps identify the best-performing values for each strategy variable, such as moving average periods or stop-loss levels. <br>
+     <br><b>4.6 Configuring Optimization Settings</b><br>
+     <br> [Placeholder image showing an example of the Date Range and Data Compression settings in the configuration menu. <br>
+     <br>In the Optimization tab, select the parameters to optimize (e.g., short and long moving average periods).
+        Set Range and Increment values for each parameter. For instance, set the short moving average range from 5 to 20 with an increment of 1 to test multiple combinations.
+        Choose an optimization metric, like net profit or Sharpe ratio, to rank each configuration. <br>
+    <br><b>4.7 Running and Reviewing Optimizations</b><br>
+    <br> Run Optimization: Click Optimize to run tests on all possible parameter combinations. Note that larger ranges and smaller increments increase computation time. <br>
+    <br> Result Analysis: After the run, an optimization heatmap will display performance across parameter combinations. Select configurations with both strong performance and consistent results across different settings. [Placeholder image of an optimization heatmap showing best-performing parameter combinations.]<br>
+
+    <br><h1> Special Features</h1><br>
+    <br>Running a Strategy on a Watchlist <br>
+    <br>Feature Overview <br>
+    <br> The Run on Watchlist feature allows users to apply a single strategy across multiple symbols within a designated watchlist. A watchlist is simply a collection of trading symbols (e.g., AAPL, MSFT, NIFTY, etc.), which users can create to represent specific sectors, indices, or asset classes. This feature runs the chosen strategy on each symbol in the list, delivering individual performance results per symbol for detailed comparison. <br>
+    <br> How to Use <br>
+    <br> Create or Load a Watchlist: In the Watchlist section, add the symbols you want to analyze. <br>
+    <br> Select Strategy: Choose a strategy from the sidebar. <br>
+    <br> Run on Watchlist: Click Run to apply the selected strategy across all symbols in the watchlist. <br>
+    <br> View Results: Results display in the workspace, with individual reports for each symbol, allowing you to navigate between them.
+          [Placeholder image showing a watchlist configuration screen and a summary of results for each symbol in the list.]<br>
+    <br><b>Benefits for Analysis and Decision Making</b><br>
+    <br>Running a strategy on a watchlist offers key insights that enhance both analysis and decision-making: <br>
+    <br> <li>Sector/Market Insights: By viewing results across multiple symbols, traders can identify sectors or stocks where the strategy performs well, helping detect market trends and sector rotation.</li> <br>
+    <br> <li>Risk Management: Running a strategy on diverse assets provides a broader view of potential risks and benefits, encouraging balanced allocation rather than relying on a single asset.</li> <br>
+    <br><li>Strategy Validation: Testing across various symbols helps assess the robustness of a strategy, especially if it consistently performs across different asset classes.</li> <br>
+    <br> <li>Optimized Decision-Making: The ability to compare performance by symbol allows traders to focus on assets with the best historical performance, enabling more confident, data-backed decisions.</li> <br>
+    <br> <b> Running a List of Strategies on a Single Symbol</b> <br>
+  
+
+
+
+
+       <p><h1 id="pvalue">P-Value</h1>
       The P-Value is used to assess the statistical significance of the strategy’s performance.<br>
       
       <br>A lower P-Value (typically below 0.05) indicates that the strategy's results are statistically significant, suggesting that the observed returns are unlikely to have occurred by chance.
       
       p-Value of the Strategy’s Performance:
+      
       <h2>Why it matters:</h2>
        The p-value measures the probability that the observed performance occurred by random chance. A p-value below a certain threshold (commonly 0.05) indicates that your strategy’s performance is statistically significant, meaning it’s unlikely to be due to random noise.
       
@@ -185,13 +319,13 @@
           <h4>Address</h4>
           <p><i class="fa fa-fw fa-map-marker"></i>E 364 Greater Kailash 2 New Delhi - 110048</p>
           <p><i class="fa fa-fw fa-phone"></i> +91 0000000000</p>
-          <p><i class="fa fa-fw fa -envelope"></i> example@mail.com</p>
+          <p><i class="fa fa-fw fa-envelope"></i> example@mail.com</p>
           <br>
         </div>
       </div>
     </footer>
 
-    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"> Technical Trends </a></div>
+    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity"> S2 Analytics </a></div>
 
     <!-- End page content -->
   </div>
