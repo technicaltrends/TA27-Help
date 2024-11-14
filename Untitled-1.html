@@ -23,6 +23,8 @@
     <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
       <a href="#gettingstarted" class="w3-bar-item w3-button">Getting Started</a>
       <a href="#datamanagement" class="w3-bar-item w3-button">Data management </a>
+      <a href="#test" class="w3-bar-item w3-button">Testing and Optimization</a>
+      <a href="#sp" class="w3-bar-item w3-button">Special Features</a>
       <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
         Parameters <i class="fa fa-caret-down"></i>
       </a>
@@ -142,7 +144,7 @@
        [Placeholder image showing an example of the Date Range and Data Compression settings in the configuration menu. <br>
     
     
-       <h1>Testing and Optimization</h1>
+       <h1 id="test">Testing and Optimization</h1>
        <br>Running Tests <br>
      <b><br>4.1 Executing a Backtest</b> <br>
       <br>To run a backtest, select a strategy from the sidebar, then specify your symbol and date range. Use the following steps:<br>
@@ -183,7 +185,7 @@
     <br> Run Optimization: Click Optimize to run tests on all possible parameter combinations. Note that larger ranges and smaller increments increase computation time. <br>
     <br> Result Analysis: After the run, an optimization heatmap will display performance across parameter combinations. Select configurations with both strong performance and consistent results across different settings. [Placeholder image of an optimization heatmap showing best-performing parameter combinations.]<br>
 
-    <br><h1> Special Features</h1><br>
+    <br><h1 id="sf"> Special Features</h1><br>
     <br>Running a Strategy on a Watchlist <br>
     <br>Feature Overview <br>
     <br> The Run on Watchlist feature allows users to apply a single strategy across multiple symbols within a designated watchlist. A watchlist is simply a collection of trading symbols (e.g., AAPL, MSFT, NIFTY, etc.), which users can create to represent specific sectors, indices, or asset classes. This feature runs the chosen strategy on each symbol in the list, delivering individual performance results per symbol for detailed comparison. <br>
@@ -200,10 +202,21 @@
     <br><li>Strategy Validation: Testing across various symbols helps assess the robustness of a strategy, especially if it consistently performs across different asset classes.</li> <br>
     <br> <li>Optimized Decision-Making: The ability to compare performance by symbol allows traders to focus on assets with the best historical performance, enabling more confident, data-backed decisions.</li> <br>
     <br> <b> Running a List of Strategies on a Single Symbol</b> <br>
+    <br> <b>Feature Overview </b><br>
+    <br>The Run Multiple Strategies feature enables users to analyze a single symbol with multiple strategies at once. This provides a comprehensive view of how different strategies perform on the selected asset, allowing users to compare and choose the most effective approach. <br>  
+    <br> <b> How To Use </b><br>
+    <br> <li>Select Symbol: Choose the symbol you want to analyze.</li> <br>
+    <br> <li>Add Strategies: In the Strategies tab, select and add multiple strategies you wish to test.</li> <br>
+    <br> <li>Run Strategies: Click Run All to execute each strategy on the chosen symbol.</li><br>
+    <br> <li>Compare Results: Results display side-by-side in the workspace, with separate performance reports for each strategy.</li> <br>
+    <br>[Placeholder image showing the strategies list with performance metrics for each applied to the same symbol.] <br>
+    <br> <b> Benefits for Analysis and Decision Making </b> <br>
+    <br>This feature allows users to explore multiple strategies in one place, enabling powerful comparative analysis: <br>
+    <br><li>Performance Comparison: Testing different strategies on the same asset allows users to identify the most profitable or consistent strategy for that specific symbol. </li> <br>
+    <br><li>Understanding Market Behavior: By comparing how different strategies react to the same data, users gain insights into how the asset behaves under various conditions, highlighting which market phases suit each strategy. </li><br>
+    <br><li>Risk and Reward Profiling: Multiple strategies provide different risk profiles, allowing users to choose approaches that align with their risk tolerance and goals.</li> <br>
+    <br><li>Fine-Tuning Strategies: Comparing results side-by-side makes it easy to spot areas where a strategy may need adjustment, such as tweaking entry/exit conditions or modifying risk parameters. </li> <br>
   
-
-
-
 
        <p><h1 id="pvalue">P-Value</h1>
       The P-Value is used to assess the statistical significance of the strategy’s performance.<br>
