@@ -217,32 +217,36 @@
     <br><li>Risk and Reward Profiling: Multiple strategies provide different risk profiles, allowing users to choose approaches that align with their risk tolerance and goals.</li> <br>
     <br><li>Fine-Tuning Strategies: Comparing results side-by-side makes it easy to spot areas where a strategy may need adjustment, such as tweaking entry/exit conditions or modifying risk parameters. </li> <br>
   
-
-       <p><h1 id="pvalue">P-Value</h1>
+   
+       <h1 id="pvalue">P-Value</h1>
       The P-Value is used to assess the statistical significance of the strategy’s performance.<br>
       
       <br>A lower P-Value (typically below 0.05) indicates that the strategy's results are statistically significant, suggesting that the observed returns are unlikely to have occurred by chance.
       
-      p-Value of the Strategy’s Performance:
+      p-Value of the Strategy’s Performance: <br>
       
-      <h2>Why it matters:</h2>
-       The p-value measures the probability that the observed performance occurred by random chance. A p-value below a certain threshold (commonly 0.05) indicates that your strategy’s performance is statistically significant, meaning it’s unlikely to be due to random noise.
+      <br><b>Why it matters:</b><br>
+       
+      <br>The p-value measures the probability that the observed performance occurred by random chance. A p-value below a certain threshold (commonly 0.05) indicates that your strategy’s performance is statistically significant, meaning it’s unlikely to be due to random noise. <br>
       
-      <h2>How it helps robustness:</h2> If the p-value is low, you can be more confident that your strategy is generating real alpha (excess returns). It’s a direct way of checking whether the performance is significantly better than random trading.
+      <br><b>How it helps robustness:</b><br>
+      <br> If the p-value is low, you can be more confident that your strategy is generating real alpha (excess returns). It’s a direct way of checking whether the performance is significantly better than random trading. <br>
       
-      <h2>Measure:</h2>
-      Conduct a hypothesis test on key performance metrics (e.g., Sharpe ratio or net profit) to calculate the p-value.
-      <br><br>The null hypothesis could be that the strategy generates zero excess return, and the test would determine whether the observed returns significantly exceed this.
+      <br><b>Measure:</b><br>
       
-      <h2>Interpretation of p-value:</h2>
-      Low p-value (< 0.05): Reject the null hypothesis — your strategy's mean return is significantly different from zero, indicating that it likely has a real edge.
-      <br><br> High p-value (>= 0.05): Fail to reject the null hypothesis — there's insufficient evidence to conclude that your strategy’s mean return is different from zero, which may suggest the performance could be due to random chance.
+      <br>Conduct a hypothesis test on key performance metrics (e.g., Sharpe ratio or net profit) to calculate the p-value.
       
-      <h2>Conclusion:</h2>
-      Statistical Significance: A low p-value strongly suggests that the performance of your strategy is statistically significant. In other words, your strategy's returns are unlikely to be a result of random fluctuations, and there is a high probability that your strategy is generating real alpha (i.e., excess returns over zero).
-      Confidence: You can be very confident (with a significance level of ~0.1%) that your strategy has a real edge and is not just capitalizing on randomness.
-      <h2>Practical Implications:</h2>
-      This is a positive result for the robustness of your strategy.
+      <br><br>The null hypothesis could be that the strategy generates zero excess return, and the test would determine whether the observed returns significantly exceed this. <br>
+      
+      <br><b>Interpretation of p-value:</b> <br>
+      <br>Low p-value (< 0.05): Reject the null hypothesis — your strategy's mean return is significantly different from zero, indicating that it likely has a real edge.
+      <br><br> High p-value (>= 0.05): Fail to reject the null hypothesis — there's insufficient evidence to conclude that your strategy’s mean return is different from zero, which may suggest the performance could be due to random chance. <br>
+      
+      <br><b>Conclusion:</b> <br>
+      <br>Statistical Significance: A low p-value strongly suggests that the performance of your strategy is statistically significant. In other words, your strategy's returns are unlikely to be a result of random fluctuations, and there is a high probability that your strategy is generating real alpha (i.e., excess returns over zero).
+      Confidence: You can be very confident (with a significance level of ~0.1%) that your strategy has a real edge and is not just capitalizing on randomness. <br>
+      <br><b>Practical Implications:</b><br>
+      <br>This is a positive result for the robustness of your strategy.
       You may want to further analyze other aspects of the strategy (e.g., stability over time, drawdown, etc.) to reinforce this conclusion.
       
       <h1 id="SQN">SQN</h1>
@@ -254,48 +258,48 @@
       <li> SQN between 2 and 3: Good system</li>
       <li> SQN > 3: Excellent system.</li>
       
-      <h1>Rolling P-Value</h1>
-      Rolling P-Value is calculated over a moving window. It helps you track the statistical significance of your strategy's performance over time.
+      <br><b>Rolling P-Value</b><br>
+      <br>Rolling P-Value is calculated over a moving window. It helps you track the statistical significance of your strategy's performance over time. <br>
       
-      <h1>Rolling SQN</h1>
-      Rolling SQN measures the system quality over a rolling period, giving insights into how the risk-adjusted return of the strategy changes across different periods.
+      <br><b>Rolling SQN</b><br>
+      <br>Rolling SQN measures the system quality over a rolling period, giving insights into how the risk-adjusted return of the strategy changes across different periods.
       
       <h1 id="bootstrap">BOOTSTRAP</h1>
-      <h2> Bootstrap Resampling:</h2>
-      <b> What it does:</b> Bootstrap resampling involves taking multiple random samples (with replacement) from your existing trade data to simulate different possible outcomes. This helps assess how stable your strategy's performance is across multiple simulated scenarios.
+      <b><br> Bootstrap Resampling:</b><br>
+      <br><b> What it does:</b> Bootstrap resampling involves taking multiple random samples (with replacement) from your existing trade data to simulate different possible outcomes. This helps assess how stable your strategy's performance is across multiple simulated scenarios.
       <br><br> <b> Why it's robust:</b> Instead of relying on a single performance result, you get a distribution of outcomes, allowing you to calculate confidence intervals for your key metrics (net profit, Sharpe ratio, etc.).
       
       <h1 id="calmarratio">CALMAR-RATIO</h1>
-      A Calmar Ratio of 2.7 indicates that your trading strategy is generating 2.7 times more annualized return than the maximum drawdown experienced. Here's how to interpret this:
+      A Calmar Ratio of 2.7 indicates that your trading strategy is generating 2.7 times more annualized return than the maximum drawdown experienced. Here's how to interpret this: <br>
       
-      <h2>Interpretation of Calmar Ratio:</h2>
+      <br><b>Interpretation of Calmar Ratio:</b><br>
       
-      Calmar Ratio > 1: A ratio greater than 1 indicates that the strategy’s annualized returns exceed its worst drawdown, which generally means the system is performing well and efficiently managing risk.
-      <br><br>Calmar Ratio of 2.7: A value of 2.7 means that for every unit of risk (drawdown), the strategy produces 2.7 units of return. This is considered very good in terms of risk-adjusted performance. It indicates that your system is generating substantial returns relative to the worst loss it experienced.
+      <br>Calmar Ratio > 1: A ratio greater than 1 indicates that the strategy’s annualized returns exceed its worst drawdown, which generally means the system is performing well and efficiently managing risk.
+      <br><br>Calmar Ratio of 2.7: A value of 2.7 means that for every unit of risk (drawdown), the strategy produces 2.7 units of return. This is considered very good in terms of risk-adjusted performance. It indicates that your system is generating substantial returns relative to the worst loss it experienced. <br>
       
-      <h2>General Guidelines:</h2>
+      <br><b>General Guidelines:</b><br>
       
-      Calmar Ratio < 1: The system is risky, as the drawdowns are larger than the returns.
+      <br>Calmar Ratio < 1: The system is risky, as the drawdowns are larger than the returns.
       <br> <br> Calmar Ratio > 1: Indicates good performance. The higher the ratio, the better the system balances return with risk.
       <br> <br> Calmar Ratio > 3: Considered excellent in most trading systems, especially over a long period.
       
       <br> <br> With a Calmar Ratio of 2.7, your system shows a good balance of return relative to its risk, indicating a robust strategy with efficient risk management.
       
       <h1 id="recoveryfactor">RECOVERY-FACTOR</h1>
-      A Recovery Factor of 6.07 means that your trading strategy's net profit is approximately 6 times larger than its maximum drawdown.
+      A Recovery Factor of 6.07 means that your trading strategy's net profit is approximately 6 times larger than its maximum drawdown. <br>
       
-      <h2>Interpretation of Recovery Factor:</h2>
+      <br><b>Interpretation of Recovery Factor:</b><br>
       
-      Recovery Factor > 1: This means the system has recovered more profit than it lost during its worst drawdown. A value above 1 is generally good.
-      <br><br> Recovery Factor of 6.07: This suggests that the system has recovered 6 times its largest loss, meaning it performs very well in recovering from drawdowns and continues generating profit.
+      <br>Recovery Factor > 1: This means the system has recovered more profit than it lost during its worst drawdown. A value above 1 is generally good.
+      <br><br> Recovery Factor of 6.07: This suggests that the system has recovered 6 times its largest loss, meaning it performs very well in recovering from drawdowns and continues generating profit. <br>
       
-      <h2>General Guidelines:</h2>
+      <br><b>General Guidelines:</b><br>
       
-      Recovery Factor < 1: The system struggles to recover from drawdowns and may indicate a risky or less profitable system.
+      <br>Recovery Factor < 1: The system struggles to recover from drawdowns and may indicate a risky or less profitable system.
       <br><br> Recovery Factor > 1: Indicates that the system is profitable and able to recover from losses. The higher the value, the better the system is at recovering from losses.
       <br><br> Recovery Factor > 5: Considered excellent. Your system is highly profitable and demonstrates strong resilience in recovering from drawdowns.
       
-      With a Recovery Factor of 6.07, your system is considered very robust, as it has recovered significantly more profit than its worst drawdown.<br></p>
+      With a Recovery Factor of 6.07, your system is considered very robust, as it has recovered significantly more profit than its worst drawdown.<br>
 
     <h1 id="gs"> 6. Getting Support</h1>
     <br> We are here to help you make the most of the application. Whether you’re facing an issue, have a question about strategy configuration, or need guidance on using advanced features, our support team is ready to assist. <br>
