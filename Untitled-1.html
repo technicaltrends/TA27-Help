@@ -32,6 +32,13 @@
       <a href="#scp" class="w3-bar-item w3-button">Strategy Creation Process</a>
       <a href="#wl" class="w3-bar-item w3-button">Watchlist</a>
       <a href="#tradespace" class="w3-bar-item w3-button">Tradespace </a>
+      <a href="#autotrade" onclick="para()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn1">
+        Autotrade <i class="fa fa-caret-down"></i>
+      </a>
+      <div id="auto" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+        <a href="#charting" class="w3-bar-item w3-button w3-light-grey">Charting Bridge</a>
+        <a href="#customtrade" class="w3-bar-item w3-button">Custom Trade</a>
+      </div>
       <a href="#test" class="w3-bar-item w3-button">Testing and Optimization</a>
       <a href="#sf" class="w3-bar-item w3-button">Special Features</a>
       <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
@@ -245,7 +252,12 @@
     <b>Conclusion</b>
     <p>In summary, a tradespace is a vital tool for traders looking to optimize their trading strategies across various symbols and time frames. By providing real-time updates and generating actionable trading signals, a tradespace empowers traders to make informed decisions in a fast-paced market environment. Understanding and utilizing a tradespace can significantly enhance a trader's effectiveness and adaptability in the financial markets</p>
 
+    <h1 id="autotrade">Autotrade: A Function for Algorithmic Trading</h1>
+    <p>Autotrade is a powerful function utilized in the realm of algorithmic trading, allowing traders to automate their trading strategies and execute trades based on predefined criteria. This document delves into the concept of autotrade, its significance in the trading landscape, and how it can enhance trading efficiency and effectiveness.</p>
     
+    <br><b>What is Autotrade?</b>
+    <br><p>Autotrade refers to the automated trading process where algorithms are employed to make trading decisions without human intervention. By leveraging complex mathematical models and historical data, autotrade systems can analyze market conditions, identify trading opportunities, and execute trades at optimal times.</p>
+
        <h1 id="test">Testing and Optimization</h1>
        <br>Running Tests <br>
      <b><br>4.1 Executing a Backtest</b> <br>
@@ -492,6 +504,16 @@
 
   <script>
   // Accordion 
+  function para() {
+    var x = document.getElementById("auto");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else {
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+    
+    // Accordion 
   function myAccFunc() {
     var x = document.getElementById("demoAcc");
     if (x.className.indexOf("w3-show") == -1) {
